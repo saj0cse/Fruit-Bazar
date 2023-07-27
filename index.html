@@ -2,70 +2,188 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Bazar</title>
-    <!-- fontAwesome -->
-    <script src="https://kit.fontawesome.com/d8b8e9288b.js" crossorigin="anonymous"></script>
-    <!-- Tailwind and DaisyUI stylee -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- custom tailwind css -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Bazar</title>
+  <!-- fontAwesome -->
+  <script src="https://kit.fontawesome.com/d8b8e9288b.js" crossorigin="anonymous"></script>
+  <!-- Tailwind and DaisyUI stylee -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- custom tailwind css -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
           }
         }
-      </script>
-    <!-- css stylee -->
-    <style>
-        .font-lato{
-            font-family: 'Lato', sans-serif;
-        }
-    </style>
+      }
+    }
+  </script>
+  <!-- css stylee -->
+  <style>
+    .font-lato {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
 </head>
 
 <body>
-        <header class="px-36 pt-11 ">
-            <!-- navbar start -->
-            <div class="navbar bg-base-100 flex lg:flex-row flex-col justify-between items-center bg-[#F85559] rounded-full ">
-                <div class="gap-2 ">
-                    <a class="btn btn-ghost text-white" href="#">Home</a>
-                    <a class="btn btn-ghost text-white" href="#">About Us</a>
-                    <a class="btn btn-ghost text-white" href="#">Shop</a>
-                    <a class="btn btn-ghost text-white" href="#">All Fruits</a>
-                </div>
-                <!--  -->
-                <div>
-                    <a href="#"><img src="images/logo.png" alt=""></a>
-                  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-                </div>
-                <!--  -->
-                <div> 
-                  <div class="form-control flex flex-row">
-                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto"/>
-                  </div>
-                </div>
-                <!--  -->
-              </div>
-                  <!-- navbar end -->
-        </header>
-        <main>
+  <header class="lg:px-36 px-5 pt-11 ">
+    <!-- navbar start -->
+    <div
+      class="navbar bg-base-100 flex lg:flex-row flex-col justify-between items-center lg:bg-[#F85559] rounded-full ">
+      <div class="gap-2 grid grid-cols-2 lg:grid-cols-4">
+        <a class="btn btn-ghost lg:text-white" href="#">Home</a>
+        <a class="btn btn-ghost lg:text-white" href="#">About Us</a>
+        <a class="btn btn-ghost lg:text-white" href="#">Shop</a>
+        <a class="btn btn-ghost lg:text-white" href="#">All Fruits</a>
+      </div>
+      <!--  -->
+      <div>
+        <a href="#"><img src="images/logo.png" alt=""></a>
+        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+      </div>
+      <!--  -->
+      <div>
+        <div class="form-control flex flex-row">
+          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+          <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
+        </div>
+      </div>
+      <!--  -->
+    </div>
+    <!-- navbar end -->
 
-        </main>
-        <footer>
+    <!--  -->
+    <div class="carousel w-full mt-12">
+      <!-- 1st slide -->
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="images/banner1.png" class="w-full" />
 
-        </footer>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-20">
+          <a href="#slide4" class="btn btn-circle bg-black text-white border-0">❮</a>
+          <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❯</a>
+        </div>
+
+        <div class="absolute flex justify-center items-center text-center h-full w-full z-10 bg-black bg-opacity-50">
+          <div class="p-4 sm:p-8 md:p-16 lg:p-24">
+            <div class="text-white">
+              <h1 class="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </h1>
+              <p class="text-xs sm:text-xl sm:my-8 my-3">
+                We supply highly quality organic products
+              </p>
+              <button class="btn bg-[#F85559] border-none text-white text-xs sm:text-xl">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2nd slide -->
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="images/banner2.png" class="w-full" />
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-20">
+          <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❮</a>
+          <a href="#slide3" class="btn btn-circle bg-black text-white border-0">❯</a>
+        </div>
+
+        <div class="absolute flex justify-center items-center text-center h-full w-full z-10 bg-black bg-opacity-50">
+          <div class="p-4 sm:p-8 md:p-16 lg:p-24">
+            <div class="text-white">
+              <h1 class="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </h1>
+              <p class="text-xs sm:text-xl sm:my-8 my-3">
+                We supply highly quality organic products
+              </p>
+              <button class="btn bg-[#F85559] border-none text-white text-xs sm:text-xl">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- 3rd slide -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="images/banner3.png" class="w-full" />
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-20">
+          <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❮</a>
+          <a href="#slide4" class="btn btn-circle bg-black text-white border-0">❯</a>
+        </div>
+
+        <div class="absolute flex justify-center items-center text-center h-full w-full z-10 bg-black bg-opacity-50">
+          <div class="p-4 sm:p-8 md:p-16 lg:p-24">
+            <div class="text-white">
+              <h1 class="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </h1>
+              <p class="text-xs sm:text-xl sm:my-8 my-3">
+                We supply highly quality organic products
+              </p>
+              <button class="btn bg-[#F85559] border-none text-white text-xs sm:text-xl">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- 4th slide -->
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="images/banner4.png" class="w-full" />
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-20">
+          <a href="#slide3" class="btn btn-circle bg-black text-white border-0">❮</a>
+          <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❯</a>
+        </div>
+
+        <div class="absolute flex justify-center items-center text-center h-full w-full z-10 bg-black bg-opacity-50">
+          <div class="p-4 sm:p-8 md:p-16 lg:p-24">
+            <div class="text-white">
+              <h1 class="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </h1>
+              <p class="text-xs sm:text-xl sm:my-8 my-3">
+                We supply highly quality organic products
+              </p>
+              <button class="btn bg-[#F85559] border-none text-white text-xs sm:text-xl">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!--  -->
+  </header>
+  <main>
+
+  </main>
+  <footer>
+
+  </footer>
 </body>
 
 </html>
